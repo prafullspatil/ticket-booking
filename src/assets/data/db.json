@@ -1,0 +1,522 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "amanpatil@gmail.com",
+      "last_name": "",
+      "email": "amanpatil@gmail.com",
+      "Password": "Aman@123"
+   
+    },
+    {
+      "first_name": "akk",
+      "last_name": "patil",
+      "email": "admin@admin.com",
+      "password": "admin1",
+   
+      "id": 2
+    },
+    {
+      "first_name": "prafull",
+      "last_name": "patil",
+      "email": "prafull@gmail.com",
+      "password": "1234",
+      
+      "id": 3
+    },
+    {
+      "first_name": "prafull",
+      "last_name": "patil",
+      "email": "prafullpatil@gmail.com",
+      "password": "prafull",
+      "id": 4
+    },
+    {
+      "first_name": "aman",
+      "last_name": "patil",
+      "email": "aman@gmail.com",
+      "password": "aman",
+      "id": 5
+    },
+    {
+      "first_name": "aman",
+      "last_name": "patil",
+      "email": "aman@mb.com",
+      "password": "Aman@123",
+      "id": 6
+    }
+  ],
+  "shows": [
+    {
+      "id": 1,
+      "name": "Zindagi Na Milegi Dobara",
+      "total_time": "2h 34m",
+      "timing": {
+        "show1": "9AM to 11AM",
+        "show2": "12PM to 2PM",
+        "show3": "3PM to 5PM",
+        "show4": "6PM to 8PM"
+      },
+      "date": "2022-10-10",
+      "type": "movie",
+      "language": "hindi",
+      "location": "India",
+      "price": 250,
+      "image": "https://m.media-amazon.com/images/M/MV5BMzQzMTA4ODY4OF5BMl5BanBnXkFtZTcwNjgyMDQxNw@@._V1_.jpg",
+      "genre": "Romance/Drama",
+      "about": "Three friends on an adventurous road trip/bachelor party in Spain learn some lessons about themselves and each other that will change them forever.",
+      "seats": {
+        "seatChart": [
+          {
+            "row": 1,
+            "booked": 2,
+            "max": 5,
+            "start": 1,
+            "booked_seats": [
+              1,
+              2
+            ]
+          },
+          {
+            "row": 2,
+            "booked": 1,
+            "max": 5,
+            "start": 6,
+            "booked_seats": [
+              8
+            ]
+          },
+          {
+            "row": 3,
+            "booked": 3,
+            "max": 5,
+            "start": 11,
+            "booked_seats": [
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "row": 4,
+            "booked": 1,
+            "max": 5,
+            "start": 16,
+            "booked_seats": []
+          },
+          {
+            "row": 5,
+            "booked": 1,
+            "max": 5,
+            "start": 21,
+            "booked_seats": []
+          }
+        ],
+        "total": 25,
+        "booked": 6,
+        "rem": 19
+      }
+    },
+    {
+      "id": 2,
+      "name": "Dhoom 3",
+      "total_time": "2h 52m",
+      "timing": {
+        "show1": "9AM to 11AM",
+        "show2": "12PM to 2PM",
+        "show3": "3PM to 5PM",
+        "show4": "6PM to 8PM"
+      },
+      "date": "2022-01-08",
+      "type": "movie",
+      "language": "Hindi",
+      "price": 450,
+      "location": "India",
+      "image": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Dhoom_3_Film_Poster.jpg/220px-Dhoom_3_Film_Poster.jpg",
+      "genre": "Action/Thriller",
+      "about": "When Sahir, a circus entertainer trained in magic and acrobatics, turns into a thief to take down a corrupt bank in Chicago that ruined his father, Indian officers Jai and Ali are called to catch him.",
+      "seats": {
+        "seatChart": [
+          {
+            "row": 1,
+            "booked": 2,
+            "max": 5,
+            "start": 1,
+            "booked_seats": [
+              1,
+              2
+            ]
+          },
+          {
+            "row": 2,
+            "booked": 1,
+            "max": 5,
+            "start": 6,
+            "booked_seats": [
+              8
+            ]
+          },
+          {
+            "row": 3,
+            "booked": 3,
+            "max": 5,
+            "start": 11,
+            "booked_seats": [
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "row": 4,
+            "booked": 1,
+            "max": 5,
+            "start": 16,
+            "booked_seats": []
+          },
+          {
+            "row": 5,
+            "booked": 1,
+            "max": 5,
+            "start": 21,
+            "booked_seats": []
+          }
+        ],
+        "total": 25,
+        "booked": 6,
+        "rem": 19
+      }
+    },
+    {
+      "id": 3,
+      "name": "Genius",
+      "total_time": "2h 45m",
+      "timing": {
+        "show1": "9AM to 11AM",
+        "show2": "12PM to 2PM",
+        "show3": "3PM to 5PM",
+        "show4": "6PM to 8PM"
+      },
+      "date": "2022-10-08",
+      "type": "movie",
+      "language": "Marathi",
+      "price": 350,
+      "location": "India",
+      "image": "http://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Genius_official_poster.jpg/220px-Genius_official_poster.jpg",
+      "genre": "Action/Thriller",
+      "about": "A young IIT genius lands himself on a mission for the Research and Analysis Wing of India (RAW), but his heart beats as much for his lady love as it does for his nation. He must do what it takes to save both",
+      "seats": {
+        "seatChart": [
+          {
+            "row": 1,
+            "booked": 2,
+            "max": 5,
+            "start": 1,
+            "booked_seats": [
+              1,
+              2
+            ]
+          },
+          {
+            "row": 2,
+            "booked": 1,
+            "max": 5,
+            "start": 6,
+            "booked_seats": [
+              8
+            ]
+          },
+          {
+            "row": 3,
+            "booked": 3,
+            "max": 5,
+            "start": 11,
+            "booked_seats": [
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "row": 4,
+            "booked": 1,
+            "max": 5,
+            "start": 16,
+            "booked_seats": []
+          },
+          {
+            "row": 5,
+            "booked": 1,
+            "max": 5,
+            "start": 21,
+            "booked_seats": []
+          }
+        ],
+        "total": 25,
+        "booked": 6,
+        "rem": 19
+      }
+    },
+    {
+      "id": 4,
+      "name": "Hoy Mi Savarkar Boltoy",
+      "total_time": "2h 30m",
+      "timing": {
+        "show1": "9AM to 11AM",
+        "show2": "12PM to 2PM",
+        "show3": "3PM to 5PM",
+        "show4": "6PM to 8PM"
+      },
+      "date": "2022-08-24",
+      "type": "play",
+      "language": "Marathi",
+      "price": 300,
+      "location": "Pune",
+      "image": "http://in.bmscdn.com/Events/moviecard/punha-sahi-re-sahi-et00051378-2020-11-30-t-16-22-20.jpg",
+      "genre": "Drama/Historical",
+      "about": "There are numeral aspects of Honourable Legend freedom fighter Mr. Vinayak Damodar Savarkar. He was an author, poet, speaker, scriptwriter, guide, friend, mentor, politician, science expert and so on. But the play is based on the political life of Veer Savarkar.",
+      "seats": {
+        "seatChart": [
+          {
+            "row": 1,
+            "booked": 2,
+            "max": 5,
+            "start": 1,
+            "booked_seats": [
+              1,
+              2
+            ]
+          },
+          {
+            "row": 2,
+            "booked": 1,
+            "max": 5,
+            "start": 6,
+            "booked_seats": [
+              8
+            ]
+          },
+          {
+            "row": 3,
+            "booked": 3,
+            "max": 5,
+            "start": 11,
+            "booked_seats": [
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "row": 4,
+            "booked": 1,
+            "max": 5,
+            "start": 16,
+            "booked_seats": []
+          },
+          {
+            "row": 5,
+            "booked": 1,
+            "max": 5,
+            "start": 21,
+            "booked_seats": []
+          }
+        ],
+        "total": 25,
+        "booked": 6,
+        "rem": 19
+      }
+    },
+    {
+      "id": 5,
+      "name": "Tilak Ani Agarkar",
+      "total_time": "2h 30m",
+      "timing": {
+        "show1": "9AM to 11AM",
+        "show2": "12PM to 2PM",
+        "show3": "3PM to 5PM",
+        "show4": "6PM to 8PM"
+      },
+      "date": "2022-11-18",
+      "type": "play",
+      "language": "Marathi",
+      "price": 200,
+      "location": "Pune",
+      "image": "http://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNCBBdWc%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00094477-xcpsdtdgvj-portrait.jpg",
+      "genre": "Biography/Comedy/Drama/Historical/Political ",
+      "about": "Tilak Ani Agarkar' is renowned play and honoured with 'Golden Leaf of Marathi theater!' It is written by well-known Playwright Late Mr.Vishram Bedekar. This play is based on the period in between 1880 to 1895. And it was first staged in 1983.",
+      "seats": {
+        "seatChart": [
+          {
+            "row": 1,
+            "booked": 2,
+            "max": 5,
+            "start": 1,
+            "booked_seats": [
+              1,
+              2
+            ]
+          },
+          {
+            "row": 2,
+            "booked": 1,
+            "max": 5,
+            "start": 6,
+            "booked_seats": [
+              8
+            ]
+          },
+          {
+            "row": 3,
+            "booked": 3,
+            "max": 5,
+            "start": 11,
+            "booked_seats": [
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "row": 4,
+            "booked": 1,
+            "max": 5,
+            "start": 16,
+            "booked_seats": []
+          },
+          {
+            "row": 5,
+            "booked": 1,
+            "max": 5,
+            "start": 21,
+            "booked_seats": []
+          }
+        ],
+        "total": 25,
+        "booked": 6,
+        "rem": 19
+      }
+    },
+    {
+      "id": 6,
+      "name": "Waghnakha",
+      "total_time": "2hrs",
+      "timing": {
+        "show1": "9AM to 11AM",
+        "show2": "12PM to 2PM",
+        "show3": "3PM to 5PM",
+        "show4": "6PM to 8PM"
+      },
+      "date": "2022-08-15",
+      "type": "play",
+      "language": "Marathi",
+      "price": 100,
+      "location": "Pune",
+      "image": "http://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCAxNSBBdWc%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00336218-retptecdec-portrait.jpg",
+      "genre": "Drama ",
+      "about": "Waghnakha is a two act historical action packed play which describes the bravery of Chhatrapati Shivaji Maharaj who defeated Afzal Khan with the help of guerrilla warfare tactics",
+      "seats": {
+        "seatChart": [
+          {
+            "row": 1,
+            "booked": 2,
+            "max": 5,
+            "start": 1,
+            "booked_seats": [
+              1,
+              2
+            ]
+          },
+          {
+            "row": 2,
+            "booked": 1,
+            "max": 5,
+            "start": 6,
+            "booked_seats": [
+              8
+            ]
+          },
+          {
+            "row": 3,
+            "booked": 3,
+            "max": 5,
+            "start": 11,
+            "booked_seats": [
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "row": 4,
+            "booked": 1,
+            "max": 5,
+            "start": 16,
+            "booked_seats": []
+          },
+          {
+            "row": 5,
+            "booked": 1,
+            "max": 5,
+            "start": 21,
+            "booked_seats": []
+          }
+        ],
+        "total": 25,
+        "booked": 6,
+        "rem": 19
+      }
+    }
+  ],
+  "seat": {
+    "seatChart": [
+      {
+        "row": 1,
+        "booked": 2,
+        "max": 5,
+        "start": 1,
+        "booked_seats": [
+          1,
+          2
+        ]
+      },
+      {
+        "row": 2,
+        "booked": 1,
+        "max": 5,
+        "start": 6,
+        "booked_seats": [
+          8
+        ]
+      },
+      {
+        "row": 3,
+        "booked": 3,
+        "max": 5,
+        "start": 11,
+        "booked_seats": [
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "row": 4,
+        "booked": 1,
+        "max": 5,
+        "start": 16,
+        "booked_seats": []
+      },
+      {
+        "row": 5,
+        "booked": 1,
+        "max": 5,
+        "start": 21,
+        "booked_seats": []
+      }
+    ],
+    "total": 25,
+    "booked": 6,
+    "rem": 19
+  }
+}

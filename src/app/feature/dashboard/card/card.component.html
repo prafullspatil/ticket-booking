@@ -1,0 +1,28 @@
+<div class="card shadow-lg rounded mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <button style="border: none;" routerLink="/show/{{cardShow.id}}">
+                <img src="{{cardShow.image}}" class="img-fluid rounded-start" alt="..."></button>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{cardShow.name | uppercase}}</h5>
+                <div class="card-subtitle mb-2 text-muted">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p class="card-text"><small class="text-muted">{{cardShow.location | uppercase}}</small></p>
+                <p class="card-text"><small class="text-muted">{{cardShow.genre}}</small></p>
+                <p class="card-text"><small class="text-muted">{{cardShow.totalTime}}</small></p>
+                <h6 class="price card-text">{{cardShow.price | currency:'INR'}}</h6>
+                <button type="submit" class="btn btn-danger input mt-2 "
+                    routerLink="/ticket/{{cardShow.id}}"
+                     ><b>Book</b></button>
+                     <!-- <button ></button> -->
+            </div>
+        </div>
+    </div>
+</div>

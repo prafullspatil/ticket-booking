@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="card container mt-4 card-body rounded shadow">
+            <img src="http://i.pinimg.com/736x/0d/cf/b5/0dcfb548989afdf22afff75e2a46a508.jpg">
+            <h2 class="name">IndianWings</h2>
+
+            <form [formGroup]="loginForm">
+                <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" autocomplete="off"
+                        formControlName="email">
+                        <span class="text-danger small"
+          *ngIf="email && email.invalid && email.touched">*Email Address required
+          & Should be Valid</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" autocomplete="off" formControlName="password">
+                    <span class="text-danger small"
+                    *ngIf="password && password.invalid && password.touched">*Password
+                    is Required & Should be Valid</span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary input  " (click)="login()"><b>Login</b></button>
+            </form>
+        </div>
+    </div>
+</div>

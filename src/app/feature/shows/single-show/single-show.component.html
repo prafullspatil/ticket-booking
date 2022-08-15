@@ -1,0 +1,63 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-5">
+
+      <div class="container">
+
+        <img class="show-img" src="{{singleShowData.image}}">
+      </div>
+    </div>
+    <div class="col-md-7">
+
+      <div class="justify-content-left mt-5">
+        <a routerLink="/dashboard">&leftarrow;<span class="text-muted">Back</span>
+        </a>
+        <div class="pro-title mt-2">
+          <h3>{{ singleShowData.name }}</h3>
+        </div>
+
+        <div class="star-rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+        <h4 class="card-text mt-1"><small class="text-muted">{{singleShowData.totalTime}}</small></h4>
+
+        <h4 class="card-text mt-1"><small class="text-muted">{{singleShowData.genre}}</small></h4>
+
+        <h4 class="card-text mt-1"><small class="text-muted">{{singleShowData.date| date}}</small></h4>
+        <div class="show-about mt-2">
+          <p><b>About:</b></p>
+          <p>{{ singleShowData.about}}</p>
+        </div>
+        <h5 class="mt-2">Avalaible Timing: </h5>
+        <div class="row mt-4">
+
+          <div class="col-md-3">
+            <button class="btn btn-outline-success">9AM : 11AM</button>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-outline-success">12PM : 1PM</button>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-outline-success">2PM : 4PM</button>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-outline-success">5PM : 7PM</button>
+          </div>
+        </div>
+
+        <button routerLink="/ticket/{{singleShowData.id}}" class="btn btn-danger mt-4">BOOK</button>
+
+
+
+
+
+      </div>
+
+    </div>
+  </div>

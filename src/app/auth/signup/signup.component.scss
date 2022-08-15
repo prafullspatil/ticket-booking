@@ -1,0 +1,59 @@
+img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.form-name {
+    font-size: 25px;
+}
+.card {
+    width: 700px;
+    height: 520px;
+}
+input.ng-invalid.ng-touched {
+    box: 0 0;
+    border: 1px solid rgb(247, 153, 153);
+    box-shadow: 0 0 10px inset rgb(247, 153, 153);
+}
+.text-danger {
+    font-size: 13px;
+}
+
+.section {
+    max-height: 580px;
+    // padding: 1rem;
+    overflow-y: auto;
+    direction: ltr;
+    scrollbar-color: #d4aa70 #e4e4e4;
+    scrollbar-width: thin;
+  
+    // h2 {
+    //   font-size: 1.5rem;
+    //   font-weight: 700;
+    //   margin-bottom: 1rem;
+    // }
+  
+  
+  }
+  
+  .section::-webkit-scrollbar {
+    width: 17px;
+    // border-top-right-radius: ;
+  }
+  
+  .section::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 100px;
+  }
+  
+  .section::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+    background-color: blue;
+  }
+  

@@ -1,0 +1,179 @@
+<section>
+    <br><br>
+    <div class="card item-cart shadow-lg">
+      <div class="row">
+  
+        <div class="col-md-8 cart">
+          <div class="title">
+            <div class="row">
+  
+              <div class="col">
+                <h4><b>{{singleShowData.name}}</b></h4>
+              </div>
+              <div class="col align-self-center text-right text-muted">0</div>
+            </div>
+          </div>
+          <div>
+            <!-- <div class="row border-top border-bottom">
+
+              <div class="row main align-items-center">
+                <div class="col-2"><img class="img-fluid cartItem-img" src="http://in.bmscdn.com/Events/moviecard/eka-lagnachi-pudhchi-gosht-et00086550-2020-12-3-t-14-54-53.jpg"></div>
+                <div class="col">
+                  <div class="row text-muted">Movies</div>
+                  <div class="row">Eka Lagnachi Pudhchi Gosht</div>
+                </div>
+                <div class="col">
+                  <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                </div>
+                <div class="col"> 999
+                  
+                </div>
+                <div class="col"> <a class="text-danger"><i
+                      class="fas fa-trash"></i></a></div>
+              </div>
+            </div> -->
+          
+            <div class="container justify-content-center seating">
+                <h4>Avalaible Seats</h4>
+                    <!-- <div class="row">
+                      <div class="row">
+                        <div class="seat"
+                        [ngClass]="isBooked? 'selected' : 'occupied  '"
+                        (click)="bookSeat(singleShowData)">
+                      </div>
+                        
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                      </div>
+                      <div class="row">
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        
+                      </div>
+                      <div class="row">
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                       
+                      </div>
+                      <div class="row">
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                      </div>
+                      <div class="row">
+                       
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                        <div class="seat" (click)="bookSeat(singleShowData)"></div>
+                       
+                      </div>
+                    
+                     
+                    </div> -->
+
+                    <ng-container *ngIf="(data$ | async) as d">
+
+                      <p>Total {{d.total}} Booked: {{d.booked}} Left: {{d.rem}}</p>
+                    <ng-container *ngFor="let r of d.seatChart">
+
+                      <div class="coach_row">
+                        <div class="circle rowx"> A{{r.row}} </div>
+                        <ng-container *ngIf="r.row !== 6">
+            
+                          <ng-container *ngFor="let n of fiveSeater;">
+                            <div class="circle seat" [ngClass]="checkBook(n,r.row,r.booked_seats) ? 'booked': ''">
+                              {{n + r.start-1}}</div>
+                          </ng-container>
+            
+                        </ng-container>
+            
+                      </div>
+            
+                    </ng-container>
+
+                  </ng-container>
+
+
+                  </div>
+        </div>
+  
+          <div class="back-to-home"><a href="#" routerLink="/dashboard">&leftarrow;<span class="text-muted">Back to Home</span>
+            </a></div>
+        </div>
+        <div class="col-md-4 summary">
+          <div>
+            <h5><b>Summary</b></h5>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col" style="padding-left:0;">Show Price</div>
+            <div class="col text-right">{{singleShowData.price | currency:'INR'}}</div>
+          </div>
+  
+          <!-- <p>SHIPPING</p>
+                <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select> --> 
+          <!-- <p class="mt-3">AVAILABLE COUPON</p>
+          <button class="btn btn btn-outline dropdown-toggle" style="border: 2px;" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false"> -->
+          <!-- <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+  
+  
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(10)">EAR00010</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(15)">RIN00015</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(20)">NEC00020</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(20)">BRCRIN20</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(25)">BRC00025</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(25)">NECRIN25</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="applyCoupon(20)">EARNEC20</a>
+            </li>
+  
+  
+          </ul> -->
+        <!-- </button>
+          <span *ngIf="isCouponApplied" style="color:green;">YOU SAVED : {{discountValue}} </span>-->
+          <form [formGroup]="bookingForm" (ngSubmit)="book()">
+            <p>No. of seat book </p>
+            <input type="number" min="1" max="5"  class="form-control" formControlName="seatsToBook">
+            <button type="submit" [disabled]="!bookingForm.valid" class="btn btn-primary">Book</button>
+          </form> 
+          <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+            <div class="col">TOTAL PRICE</div>
+            <div class="col text-right">0</div>
+          </div>
+          <!-- <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;" *ngIf="!isCouponApplied">
+            <div class="col">TOTAL PRICE</div>
+            <div class="col text-right">{{ totalPrice | currency: "INR" }}</div>
+          </div> -->
+          <button class="btn checkout-btn">CHECKOUT</button>
+  
+        </div>
+      </div>
+    </div>
+  
+  
+  </section>

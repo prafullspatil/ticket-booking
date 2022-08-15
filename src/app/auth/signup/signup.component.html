@@ -1,0 +1,47 @@
+<div class="container-fluid section">
+    <div class="container">
+        <div class="card container mt-4 card-body rounded shadow section">
+            <form [formGroup]="addUser" (ngSubmit)="saveUser()">
+                <div class="heading">
+                    <img
+                        src="http://static.vecteezy.com/system/resources/previews/002/996/993/original/falcon-wing-logo-icon-design-template-free-vector.jpg">
+                    <label class="form-name m-2">REGISTRATION FORM</label>
+                    <img
+                        src="http://static.vecteezy.com/system/resources/previews/002/996/993/original/falcon-wing-logo-icon-design-template-free-vector.jpg">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" autocomplete="off" formControlName="firstName">
+                    <span class="text-danger"
+                    *ngIf="addUser.get('firstName')?.invalid &&  addUser.get('firstName')?.touched">
+                    Name cannot be longer than 10 characters</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" autocomplete="off" formControlName="lastName">
+                    <span class="text-danger"
+                    *ngIf="addUser.get('lastName')?.invalid &&  addUser.get('lastName')?.touched">
+                    Name cannot be longer than 10 characters</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" autocomplete="off"
+                        formControlName="email">
+                        <span class="text-danger"
+                        *ngIf="addUser.get('email')?.invalid &&  addUser.get('email')?.touched">
+                        Enter Valid Email id</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" autocomplete="off" formControlName="password">
+                    <span class="text-danger"
+                    *ngIf="addUser.get('password')?.invalid &&  addUser.get('password')?.touched">
+                    Enter Valid Password</span>
+                </div>
+
+                <button [disabled]="!addUser.valid" class="btn btn-outline-success" type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
