@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription, tap } from 'rxjs';
 import { ApiService } from 'src/app/shared/service/api.service';
-import { SeatService } from 'src/app/shared/service/seat.service';
+
 
 @Component({
   selector: 'app-ticket',
@@ -12,73 +12,64 @@ import { SeatService } from 'src/app/shared/service/seat.service';
 })
 export class TicketComponent implements OnInit {
 
-  singleShowData: any = [];
-  bookingForm!: FormGroup;
-  public data$!: Observable<any>;
-  public fiveSeater = [1, 2, 3, 4, 5];
-  public message = "";
-  total: number = 0;
-  booked: number = 0;
-  rem: number = 0;
-  bookings = [];
+  public show: any = [];
+  rows: string[] = ['A', 'B', 'C', 'D', 'E'];
+  cols: number[] = [1, 2, 3, 4, 5];
+  selected: string[] = [];
+  totalPrice: number = 0;
   
-  constructor(private seat: SeatService, private router: ActivatedRoute, private api: ApiService, private _fb: FormBuilder) { }
+  constructor(private api: ApiService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.createForm();
-    this.data$ = this.seat.data.pipe(tap(d => (this.rem = d.rem)));
     this.getShowById();
   }
 
-
   getShowById() {
-    const show_id = this.router.snapshot.params['id']
-    this.api.getShowById(show_id)
+    this.api.getShowById(this.router.snapshot.params['id'])
       .subscribe((resp) => {
-        this.singleShowData = resp;
+        this.show = resp;
+        console.log(resp);
       });
   }
 
-  createForm() {
-    this.bookingForm = this._fb.group({
-      seatsToBook: ["", Validators.required]
-    });
-  }
+ 
+  onSeatClicked(seatPosition: string) {
+    let i = this.selected.indexOf(seatPosition);
 
-  getSeatNum(n: number, row: number): number {
-    return (row - 1) * 5 + n;
-  }
-
-  checkBook(n: number, row: number, bs: number[]): boolean {
-    const seat = this.getSeatNum(n, row);
-    return bs.some(bs => bs === seat);
-  }
-
-  book() {
-    if (!this.bookingForm.valid) return;
-    let { seatsToBook } = this.bookingForm.value;
-    if (seatsToBook > 5) {
-      this.message = "Max 7 seats at a time";
-      this.hideMessage();
-      return;
+    if (i !== -1) {
+      this.selected.splice(i, 1)
+    } else {
+    
+      if (this.show.reserved.indexOf(seatPosition) === -1)
+        this.selected.push(seatPosition);
     }
-    if (seatsToBook <= 0) {
-      this.message = "Min of 1 seat required";
-      this.hideMessage();
-      return;
-    }
-    if (this.rem < seatsToBook) {
-      this.message = `Only ${this.rem} seats available, reduce num of seats`;
-      this.hideMessage();
-      return;
-    }
-    const [bookedSeats, rem] = this.seat.bookSeats(seatsToBook);
-    this.rem = rem;
   }
 
-  hideMessage(t = 1500) {
-    setTimeout(() => (this.message = ""), t);
+  
+   seatStatus(seatPosition: string) {
+    if (this.show.reserved.indexOf(seatPosition) !== -1) {
+      return 'reserved';
+    } else if (this.selected.indexOf(seatPosition) !== -1) {
+      return 'selected';
+    } else {
+      return 0;
+    }
   }
+
+  clearSeats() {
+    this.selected = [];
+  }
+  
+   bookSeat() {
+    if (this.selected.length > 0) {
+      alert("Selected Seats: " + this.selected + "\nTotal: " + (this.show.price * this.selected.length));
+    } else {
+      alert("No seats selected!");
+    }
+  }
+
+
+  
 
 }

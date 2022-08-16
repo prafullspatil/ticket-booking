@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -8,6 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiService {
   isLoggedIn = false;
+  // loggined= new Subject<boolean>();
   constructor(private http: HttpClient, private router: Router) { }
 
   savedata(data: any) {
@@ -29,7 +31,7 @@ export class ApiService {
           return a.email === userEmail && a.password === userPass;
         });
         if (user) {
-          alert("login success")
+          alert("Login SuccessFully !!!")
           this.isLoggedIn = true;
         
           this.router.navigate(['/dashboard']);

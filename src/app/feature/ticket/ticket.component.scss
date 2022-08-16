@@ -1,13 +1,5 @@
 @import '/src/assets/color/color.scss';
-body{
-  background: #ddd;
-//   min-height: 100vh;
-  vertical-align: middle;
-  display: flex;
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
+
 .title{
   margin-bottom: 5vh;
 }
@@ -41,8 +33,7 @@ body{
   background-color: $mypink;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  padding: 4vh;
-  // color: rgb(65, 65, 65);
+  padding: 4vh;;
   color:$mywhite;
 }
 @media(max-width:767px){
@@ -50,68 +41,6 @@ body{
   border-top-right-radius: unset;
   border-bottom-left-radius: 1rem;
   }
-}
-.summary .col-2{
-  padding: 0;
-}
-.summary .col-10
-{
-  padding: 0;
-}.row{
-  margin: 0;
-}
-.title b{
-  font-size: 1.5rem;
-}
-.main{
-  margin: 0;
-  padding: 2vh 0;
-  width: 100%;
-}
-.col-2, .col{
-  padding: 0 1vh;
-}
-a{
-  padding: 0 1vh;
-}
-.close{
-  margin-left: auto;
-  font-size: 0.7rem;
-}
-.cartItem-img{
-  width: 3.5rem;
-}
-.back-to-shop{
-  margin-top: 4.5rem;
-}
-h5{
-  margin-top: 4vh;
-}
-hr{
-  margin-top: 1.25rem;
-}
-form{
-  padding: 2vh 0;
-}
-select{
-  border: 1px solid rgba(0, 0, 0, 0.137);
-  padding: 1.5vh 1vh;
-  margin-bottom: 4vh;
-  outline: none;
-  width: 100%;
-  background-color: rgb(247, 247, 247);
-}
-input{
-  border: 1px solid rgba(0, 0, 0, 0.137);
-  padding: 1vh;
-  margin-bottom: 4vh;
-  outline: none;
-  width: 100%;
-  background-color: rgb(247, 247, 247);
-}
-input:focus::-webkit-input-placeholder
-{
-    color:transparent;
 }
 .checkout-btn{
   background-color: white;
@@ -124,25 +53,19 @@ input:focus::-webkit-input-placeholder
   border:none;
   border-radius: 13px;
 }
-.checkout-btn:focus{
-  box-shadow: none;
-  outline: none;
-  box-shadow: none;
-  color: white;
-  -webkit-box-shadow: none;
-  -webkit-user-select: none;
-  transition: none; 
-}
-.checkout-btn:hover{
-  color: $mypink;
-}
-a{
-  color: black; 
-}
-a:hover{
+.clear-btn{
+  background-color: red;
+  border-color: #000;
   color: black;
-  text-decoration: none;
+  width: 100%;
+  font-size: 0.7rem;
+  margin-top: 4vh;
+  padding: 1vh;
+  border:none;
+  border-radius: 13px;
+
 }
+
 #code{
   background-image: linear-gradient(to left, white , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
   background-repeat: no-repeat;
@@ -150,100 +73,34 @@ a:hover{
   background-position-y: center;
 }
 
-
-
-.emptycard {
-  margin-bottom: 30px;
-  border: none;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  letter-spacing: .5px;
-  border-radius: 8px;
-  -webkit-box-shadow: 1px 5px 24px 0 rgba(68,102,242,.05);
-  box-shadow: 1px 5px 24px 0 rgba(68,102,242,.05);
+.wordWrap {
+  word-break: break-all;
 }
 
-.emptycard .emptycard-header {
-  background-color: #fff;
-  border-bottom: none;
-  padding: 24px;
-  border-bottom: 1px solid #f6f7fb;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.innerContainer {
+  color: #fff;
+  text-align: center;
 }
-
-.emptycard-header:first-child {
-  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
-}
-
- .btn-shop{
-    background-color: $mypink;
-    border-width: 20px;
-    border-radius: 20px;
-    border:none;
-    color:$mywhite;
-    font-weight: bold;
-  }
-  .btn-shop:hover{
-    background-color: $mywhite;
-    border:1px solid $mypink;
-    color:$mypink;
-  }
-
-.emptycard .ecart {
-  padding: 30px;
-  background-color: transparent;
-}
-
-.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
-  background-color: #4466f2!important;
-  border-color: #4466f2!important;
-  border-radius: 20px;
-}  
-.seating{
-    padding-left: 170px;
-}
-
-
-
-
-
-
-.coach_row {
-/* border: 1px solid red; */
-display: flex;
-align-items: center;
-justify-content: flex-start;
-margin-top: 1em;
-}
-
-.msg {
-height: 2em;
-}
-
-.circle {
-box-sizing: border-box;
-display: flex;
-align-items: center;
-justify-content: center;
- width: 32px;
-height: 32px;
-border-radius: 100px;
-color: white;
-
-}
-
-.rowx {
-margin-right: 32px;
-font-size: 0.71em;
-background: rgb(14, 12, 12);
-}
-
 .seat {
-background: rgb(19, 179, 53);
-margin: 0 2px;
+  padding-right: 5px;
+  cursor: pointer;
 }
 
-.seat.booked {
-background: rgb(131, 14, 30);
+.reservedSeat {
+  color: #ce4844;
+}
+.selectedSeat {
+  color: #5cb85c;
+}
+.freeSeat {
+  color: blue;
+}
+.seating{
+  margin: 0 0 0 214px;
+}
+h5{
+  margin: 0 0 0 -13px;
+}
+.date-font{
+  font-size:15px;
 }

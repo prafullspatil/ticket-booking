@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/shared/service/api.service';
-import { SeatService } from 'src/app/shared/service/seat.service';
+
 
 @Component({
   selector: 'app-single-show',
@@ -11,7 +11,7 @@ import { SeatService } from 'src/app/shared/service/seat.service';
 export class SingleShowComponent implements OnInit {
 
   singleShowData:any=[];
-  constructor(private api:ApiService,private router:ActivatedRoute, private seat:SeatService) { }
+  constructor(private api:ApiService,private router:ActivatedRoute) { }
 
   ngOnInit(): void {
     
