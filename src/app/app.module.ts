@@ -4,10 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
-
+import { NgxHttpLoaderModule } from 'ngx-http-loader';
 import { AuthModule } from './auth/auth.module';
 import { FeatureModule } from './feature/feature.module';
-import { FilterPipe } from './shared/pipes/filter.pipe';
+
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
     AppRoutingModule,
     AuthModule,
     FeatureModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxHttpLoaderModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

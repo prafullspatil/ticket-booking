@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/shared/service/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  loggedIn:boolean=false;
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+          this.api.loggedIn$.subscribe((res)=>{
+            this.loggedIn=res;
+          })
   }
-
 }

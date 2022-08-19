@@ -1,0 +1,41 @@
+<br><br><br>
+<div class="container tbl-container section">
+    <a routerLink="/dashboard">&leftarrow;<span class="text-muted">Back</span>
+    </a>
+    <div class="row tbl-fixed">
+        <table class="table  text-center table-condensed" id='tab'> 
+            <!-- =========Products Heading========= -->
+             <thead>
+                <tr>
+                    <th scope="col">Booking ID</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Movie Name</th>
+                   
+                    <th scope="col">Email</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Seats</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <!-- =========Displaying Booking Details List========= -->
+                 <tr *ngFor="let item of history;">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.user.firstName}}</td>
+                    <td>{{ item.show.name}}</td>
+                  
+                    <td>{{ item.user.email}}</td>
+                    <td>{{ item.show.date | date:'medium'}}</td>
+                    <td>{{ item.reserved }}</td>
+                    <td>
+                        
+                      
+                       
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

@@ -11,24 +11,15 @@
   border-radius: 1rem;
   border: transparent;
 }
-@media(max-width:767px){
-  .item-cart{
-      margin: 3vh auto;
-  }
-}
+
+
 .cart{
   background-color: #fff;
   padding: 4vh 5vh;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
 }
-@media(max-width:767px){
-  .cart{
-      padding: 4vh;
-      border-bottom-left-radius: unset;
-      border-top-right-radius: 1rem;
-  }
-}
+
 .summary{
   background-color: $mypink;
   border-top-right-radius: 1rem;
@@ -36,12 +27,7 @@
   padding: 4vh;;
   color:$mywhite;
 }
-@media(max-width:767px){
-  .summary{
-  border-top-right-radius: unset;
-  border-bottom-left-radius: 1rem;
-  }
-}
+
 .checkout-btn{
   background-color: white;
   border-color: #000;
@@ -97,10 +83,30 @@
 }
 .seating{
   margin: 0 0 0 214px;
+  
 }
 h5{
   margin: 0 0 0 -13px;
 }
 .date-font{
   font-size:15px;
+}
+
+.show-seat{
+   display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 700px) {
+  
+  .seating{
+    margin: 0 0 0 150px;
+    
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .seating{
+    margin: 0 0 0 113px;
+    
+  }
 }

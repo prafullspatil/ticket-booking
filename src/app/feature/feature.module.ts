@@ -8,6 +8,7 @@ import { SingleShowComponent } from './shows/single-show/single-show.component';
 import { FilterPipe } from '../shared/pipes/filter.pipe';
 import { TicketComponent } from './ticket/ticket.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HistoryComponent } from './history/history.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     SingleShowComponent,
     FilterPipe,
-    TicketComponent
+    TicketComponent,
+    HistoryComponent
   ],
   imports: [
     CommonModule,

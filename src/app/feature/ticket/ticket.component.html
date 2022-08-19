@@ -11,31 +11,21 @@
 
           </div>
         </div>
-        <div>
+       
           <div class="row">
-            <div class="col-sm-6 mt-5">
-              <div class="row">
-             
-                  <p class="col-sm-2 mt-2 fa-solid fa-chair freeSeat"></p>
-                  <span class="col-sm-8" style="margin-top:4px">Available Seat</span>
-               
-              </div>
-              <div class="row">
-               
-                  <p class="col-sm-2 mt-2 fa-solid fa-chair reservedSeat"></p>
-                  <span class="col-sm-8"  style="margin-top:4px">Reserved Seat</span>
-                
-              </div>
-              <div class="row">
-              
-                  <p class="col-sm-2 mt-2 fa-solid fa-chair selectedSeat"></p>
-                  <span class="col-sm-8" style="margin-top:4px">Selected Seat</span>
-               
-              </div>
+            <div class="col show-seat">
+              <span class="fa-solid p-2 fa-chair freeSeat"></span>
+                <span class="mt-1">Avalaible</span>
+              <span class="fa-solid p-2 fa-chair reservedSeat"></span>
+            <span class="mt-1">Reserved</span>
+              <span class="fa-solid p-2 fa-chair selectedSeat"></span>
+            <span class="mt-1">Selected</span>
             </div>
-            <div class="col-sm-6">
-              <div class="justify-content-center ">
-                <h4>Avalaible Seats</h4>
+          </div>
+          
+            <div class="seating mt-5  ">
+              
+              
                 <div *ngFor="let row of rows">
                   <span class="seat" *ngFor="let col of cols" (click)="onSeatClicked(row + col)"
                     [ngSwitch]="seatStatus(row + col)">
@@ -45,12 +35,12 @@
                   </span>
                 </div>
 
-              </div>
+             
             </div>
-          </div>
-        </div>
+        
+      
 
-        <div class="back-to-home"><a href="#" routerLink="/dashboard">&leftarrow;<span class="text-muted">Back to
+        <div class="back-to-home mt-5"><a href="#" routerLink="/dashboard">&leftarrow;<span class="text-muted">Back to
               Home</span>
           </a></div>
       </div>
@@ -82,7 +72,7 @@
           </div>
           <div class="row">
             <div class="col" style="padding-left:0;">Seat Reserved</div>
-            <div class="col text-right wordWrap">{{selected.length}} <span>({{selected}})</span></div>
+            <div class="col text-right wordWrap">{{selected.length}} </div>
           </div>
           <div class="row">
             <div class="col" style="padding-left:0;">Seat Price</div>

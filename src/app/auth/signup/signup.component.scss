@@ -15,9 +15,15 @@ img {
     height: 520px;
 }
 input.ng-invalid.ng-touched {
-    box: 0 0;
-    border: 1px solid rgb(247, 153, 153);
-    box-shadow: 0 0 10px inset rgb(247, 153, 153);
+  box: 0 0;
+  border: 1px solid rgb(247, 153, 153);
+  box-shadow: 0 0 10px inset rgb(247, 153, 153);
+  animation:  shake 300ms;
+}
+@keyframes shake{
+25%{ transform: translate(4px);}
+50%{ transform: translate(-4px);}
+75%{ transform: translate(4px);}
 }
 .text-danger {
     font-size: 13px;
@@ -25,24 +31,15 @@ input.ng-invalid.ng-touched {
 
 .section {
     max-height: 580px;
-    // padding: 1rem;
     overflow-y: auto;
     direction: ltr;
     scrollbar-color: #d4aa70 #e4e4e4;
-    scrollbar-width: thin;
-  
-    // h2 {
-    //   font-size: 1.5rem;
-    //   font-weight: 700;
-    //   margin-bottom: 1rem;
-    // }
-  
+    scrollbar-width: thin; 
   
   }
   
   .section::-webkit-scrollbar {
     width: 17px;
-    // border-top-right-radius: ;
   }
   
   .section::-webkit-scrollbar-track {
