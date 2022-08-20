@@ -32,16 +32,23 @@ export class TicketComponent implements OnInit {
 
   getReservedSeat() {
     this.api.getSeatDetails(this.router.snapshot.params['id']).subscribe((res) => {
-      this.getMergedArray(res);
+      this.splitString(res);
     })
   }
 
-  getMergedArray(data: any) {
+  splitString(data: any) {
     data.forEach((a: any) => {
-      this.reserved = this.reserved.concat(a.reserved)
+      let split:any=[];
+      split=a.reserved.split(", ");
+      this.mergerArray(split);
     });
   }
 
+  mergerArray(data:any){
+    data.forEach((a:any)=>{
+      this.reserved = this.reserved.concat(a);
+    })
+  }
 
   getShowById() {
     this.api.getShowById(this.router.snapshot.params['id'])
